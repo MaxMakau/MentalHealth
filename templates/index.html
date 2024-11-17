@@ -1,0 +1,1766 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="">
+        <meta name="robots" content="index, follow">
+        <title>Home</title>
+        <link rel="preload" href="fonts/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="fonts/ClashDisplay-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" fetchpriority="high" as="image" href="https://images.pexels.com/photos/29422191/pexels-photo-29422191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" type="image/jpeg">
+        <script src="/static/js/chat.js"></script>
+        <meta name="env" content="production">
+        <script>
+            // Disable source map requests
+            if (window.navigator && window.navigator.serviceWorker) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    registrations.forEach(function(registration) {
+                registration.unregister();
+                    });
+                });
+            }
+        </script>
+        <style>
+            @font-face {
+                font-family: ClashDisplay;
+                src: local("ClashDisplay"),url(/fonts/ClashDisplay-Regular.woff2) format("woff2"),url(/fonts/ClashDisplay-Regular.woff) format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: ClashDisplay;
+                src: local("ClashDisplay"),url(/fonts/ClashDisplay-Medium.woff2) format("woff2");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: ClashDisplay;
+                src: local("ClashDisplay"),url(/fonts/ClashDisplay-SemiBold.woff2) format("woff2"),url(/fonts/ClashDisplay-Semibold.woff2) format("woff2");
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: Poppins;
+                src: local("Poppins"),url(/fonts/Poppins-Regular.woff2) format("woff2"),url(/fonts/Poppins-Regular.woff) format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: Poppins;
+                src: local("Poppins"),url(/fonts/Poppins-Medium.woff2) format("woff2");
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: Poppins;
+                src: local("Poppins"),url(/fonts/Poppins-SemiBold.woff2) format("woff2"),url(/fonts/Poppins-Semibold.woff2) format("woff2");
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap
+            }
+
+            @font-face {
+                font-family: Poppins;
+                src: local("Poppins"),url(/fonts/Poppins-Bold.woff2) format("woff2");
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap
+            }
+            .user-message {
+    background-color: #e3f2fd;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 4px 0;
+    margin-left: auto;
+    max-width: 80%;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 4px 0;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.hidden {
+    display: none;
+}
+        </style>
+        <link rel="stylesheet" href="/static/css/styles.3258fd2b.css">
+        <link rel="icon" type="image/x-icon" href="">
+        <meta property="og:image" content="">
+        <meta name="keywords" content="" s>
+        <style type="text/css"></style>
+        <script>
+            window.__APPSTATE__ = {
+                meta: {
+                    componentName: "Meta",
+                    properties: {
+                        seoSettings: {
+                            id: "seoSettings",
+                            componentName: "SeoSettings",
+                            type: "Component",
+                            groupLabel: "SEO optimizations",
+                            title: "Home",
+                            slug: "/",
+                            description: "",
+                            img: "",
+                            ogImg: "",
+                            keyword: "",
+                            tracking: "",
+                            delete: "",
+                            duplicate: ""
+                        },
+                        CustomDomains: "customDomain",
+                        customDomain: {
+                            id: "customDomain",
+                            componentName: "CustomDomain",
+                            type: "Component",
+                            groupLabel: "Custom Domain",
+                            domain: "",
+                            undefined: ""
+                        },
+                        SeoSetting: "seoSettings"
+                    }
+                },
+                layout: [{
+                    uuid: "5dyit",
+                    componentName: "HeroBanner1",
+                    displayName: "Hero Banner",
+                    backgroundImage: "https://images.pexels.com/photos/29422191/pexels-photo-29422191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                    properties: {
+                        220043: {
+                            id: 220043,
+                            type: "ComboBox",
+                            text: "Join the Movement",
+                            elType: "Button",
+                            textPlaceholder: "Button",
+                            hrefPlaceholder: "https://www.google.com",
+                            hrefLabel: "Link",
+                            groupLabel: "Button",
+                            isExternal: !1,
+                            isPrimary: !0,
+                            isButton: !0,
+                            href: "/chat",
+                            label: "Name",
+                            action: {
+                                name: "page",
+                                href: "/"
+                            }
+                        },
+                        834952: {
+                            id: 834952,
+                            button: 220043
+                        },
+                        hb1t2: {
+                            id: "hb1t2",
+                            type: "Text",
+                            text: "Your Mind Matters: Let's Talk Mental Health!",
+                            elType: "Text"
+                        },
+                        title: "hb1t2",
+                        hb1t3: {
+                            id: "hb1t3",
+                            type: "Text",
+                            text: "Join the revolution of mental health awareness where AI meets empathy, and your questions find answers faster than you can say 'Therapy'!",
+                            elType: "Text"
+                        },
+                        subtitle: "hb1t3",
+                        "794oqw": {
+                            id: "794oqw",
+                            showButtons: !0,
+                            list: ["1iymne", 834952],
+                            type: "ButtonList"
+                        },
+                        "1iymne": {
+                            id: "1iymne",
+                            button: "hb1b2"
+                        },
+                        hb1b2: {
+                            id: "hb1b2",
+                            type: "ComboBox",
+                            text: "Ask Watson",
+                            elType: "Button",
+                            className: "button sbutton-2 button-extra button-text chat-trigger",
+                            href: "/chat",
+                            action: {
+                                name: "custom",
+                                handler: "openChatModal"
+                            }
+                        },
+                        buttonList: "794oqw"
+                    },
+                    theme: "night1",
+                    background: "rgba(0, 0, 0, 1)"
+                }, {
+                    uuid: "hnbq1",
+                    componentName: "FeatureHighlightA",
+                    displayName: "Feature Highlight",
+                    properties: {
+                        v1tvto: {
+                            id: "v1tvto",
+                            list: ["5kk1i6", "tdwpzc", "8wn53w"],
+                            showImage: !0,
+                            showSubtitle: !0,
+                            showTitle: !0,
+                            type: "FeatureList"
+                        },
+                        "5kk1i6": {
+                            id: "5kk1i6",
+                            title: "t5rg6t",
+                            subtitle: "g92cbs",
+                            image: "o2uniq"
+                        },
+                        t5rg6t: {
+                            id: "t5rg6t",
+                            type: "Text",
+                            text: "Instant Answers!",
+                            elType: "Text"
+                        },
+                        g92cbs: {
+                            id: "g92cbs",
+                            type: "Text",
+                            text: "Get real-time responses to your mental health queries from our AI assistant, because who has time to wait?",
+                            elType: "Text"
+                        },
+                        o2uniq: {
+                            id: "o2uniq",
+                            type: "LogoImage",
+                            label: "Logo",
+                            alt: "feature-logo",
+                            src: "https://static.uncody.com/icons/stats-chart.svg"
+                        },
+                        tdwpzc: {
+                            id: "tdwpzc",
+                            title: "m6gcpb",
+                            subtitle: "bauzqq",
+                            image: "hbpf15"
+                        },
+                        m6gcpb: {
+                            id: "m6gcpb",
+                            type: "Text",
+                            text: "Expert-Backed Resources",
+                            elType: "Text"
+                        },
+                        bauzqq: {
+                            id: "bauzqq",
+                            type: "Text",
+                            text: "Access a treasure trove of curated content and tools from mental health professionals—no more Googling for hours!",
+                            elType: "Text"
+                        },
+                        hbpf15: {
+                            id: "hbpf15",
+                            type: "LogoImage",
+                            label: "Logo",
+                            alt: "feature-logo",
+                            src: "https://static.uncody.com/icons/server.svg"
+                        },
+                        "8wn53w": {
+                            id: "8wn53w",
+                            title: "gt212g",
+                            subtitle: "89dwzk",
+                            image: "uo336w"
+                        },
+                        gt212g: {
+                            id: "gt212g",
+                            type: "Text",
+                            text: "Community Support",
+                            elType: "Text"
+                        },
+                        "89dwzk": {
+                            id: "89dwzk",
+                            type: "Text",
+                            text: "Join our growing community of like-minded individuals who prioritize mental health, because you're never alone in this journey!",
+                            elType: "Text"
+                        },
+                        uo336w: {
+                            id: "uo336w",
+                            type: "LogoImage",
+                            label: "Logo",
+                            alt: "feature-logo",
+                            src: "https://static.uncody.com/icons/airplane.svg"
+                        },
+                        featureList: "v1tvto",
+                        fehqw1: {
+                            id: "fehqw1",
+                            showButtons: !1,
+                            list: ["fehqw2"],
+                            type: "ButtonList"
+                        },
+                        fehqw2: {
+                            id: "fehqw2",
+                            button: "fehqw3"
+                        },
+                        fehqw3: {
+                            id: "fehqw3",
+                            href: "/",
+                            label: "Name",
+                            text: "Explore More",
+                            textPlaceholder: "Name",
+                            hrefPlaceholder: "Select",
+                            hrefLabel: "Link",
+                            groupLabel: "Button",
+                            isExtrenal: !1,
+                            isPrimary: !0,
+                            isButton: !0,
+                            type: "ComboBox",
+                            elType: "Button",
+                            action: {
+                                name: "page",
+                                href: "/"
+                            }
+                        },
+                        buttonList: "fehqw1"
+                    },
+                    theme: "light4"
+                }, {
+                    uuid: "va295",
+                    componentName: "ProductSideA",
+                    displayName: "Product Side",
+                    properties: {
+                        r71zil: {
+                            id: "r71zil",
+                            text: "What Makes Us Unique?",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        title: "r71zil",
+                        l64jdp: {
+                            id: "l64jdp",
+                            text: "It's not just about talking; it's about understanding and acting. Discover how we blend technology with care!",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        subtitle: "l64jdp",
+                        f6i2hf: {
+                            id: "f6i2hf",
+                            type: "Image",
+                            label: "Feature Image",
+                            align: "center",
+                            aspectRatio: 1,
+                            height: 554.7,
+                            roundedCorner: 1,
+                            size: "86",
+                            src: "https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            width: 554.7,
+                            supportsCopy: !0
+                        },
+                        image: "f6i2hf",
+                        psabg2dp: {
+                            id: "psabg2dp",
+                            isReversed: !1
+                        },
+                        displayOptions: "psabg2dp",
+                        leh1kk: {
+                            id: "leh1kk",
+                            list: ["fd6z06", "jnsi39", "llfceg"],
+                            showImage: !0,
+                            showSubtitle: !0,
+                            showTitle: !0,
+                            type: "FeatureList"
+                        },
+                        fd6z06: {
+                            id: "fd6z06",
+                            title: "epp5rj",
+                            subtitle: "ruh3wd",
+                            image: "apzml7"
+                        },
+                        epp5rj: {
+                            id: "epp5rj",
+                            type: "Text",
+                            text: "AI-Powered Insights",
+                            elType: "Text"
+                        },
+                        ruh3wd: {
+                            id: "ruh3wd",
+                            type: "Text",
+                            text: "Our Watsonx AI analyzes your questions and provides personalized answers, cutting through the noise.",
+                            elType: "Text"
+                        },
+                        apzml7: {
+                            id: "apzml7",
+                            type: "LogoImage",
+                            label: "Icon",
+                            src: "https://static.uncody.com/icons/checkmark-sharp.svg"
+                        },
+                        jnsi39: {
+                            id: "jnsi39",
+                            title: "uvpsa1",
+                            subtitle: "25pbge",
+                            image: "ugv1xa"
+                        },
+                        uvpsa1: {
+                            id: "uvpsa1",
+                            type: "Text",
+                            text: "User-Friendly Design",
+                            elType: "Text"
+                        },
+                        "25pbge": {
+                            id: "25pbge",
+                            type: "Text",
+                            text: "Navigate our site like a breeze—because who needs complicated when you're already stressed out?",
+                            elType: "Text"
+                        },
+                        ugv1xa: {
+                            id: "ugv1xa",
+                            type: "LogoImage",
+                            label: "Icon",
+                            src: "https://static.uncody.com/icons/checkmark-sharp.svg"
+                        },
+                        llfceg: {
+                            id: "llfceg",
+                            title: "eq0r3e",
+                            subtitle: "xl7uz2",
+                            image: "2gq20b"
+                        },
+                        eq0r3e: {
+                            id: "eq0r3e",
+                            type: "Text",
+                            text: "24/7 Availability",
+                            elType: "Text"
+                        },
+                        xl7uz2: {
+                            id: "xl7uz2",
+                            type: "Text",
+                            text: "Mental health doesn't keep office hours, and neither do we! Get assistance anytime, anywhere.",
+                            elType: "Text"
+                        },
+                        "2gq20b": {
+                            id: "2gq20b",
+                            type: "LogoImage",
+                            label: "Icon",
+                            src: "https://static.uncody.com/icons/checkmark-sharp.svg"
+                        },
+                        featureList: "leh1kk",
+                        ioiqn3: {
+                            id: "ioiqn3",
+                            showButtons: !1,
+                            list: ["jiwaem5"],
+                            type: "ButtonList"
+                        },
+                        jiwaem5: {
+                            id: "jiwaem5",
+                            button: "iuxkj3"
+                        },
+                        iuxkj3: {
+                            id: "iuxkj3",
+                            href: "/",
+                            label: "Name",
+                            text: "Discover Features",
+                            textPlaceholder: "Name",
+                            hrefPlaceholder: "Select",
+                            hrefLabel: "Link",
+                            groupLabel: "Button",
+                            isExtrenal: !1,
+                            isPrimary: !0,
+                            isButton: !0,
+                            type: "ComboBox",
+                            elType: "Button",
+                            action: {
+                                name: "page",
+                                href: "/"
+                            }
+                        },
+                        buttonList: "ioiqn3"
+                    },
+                    theme: "light1"
+                }, {
+                    uuid: "eb9x8",
+                    componentName: "OurWork",
+                    displayName: "Our Work",
+                    properties: {
+                        kupxz6: {
+                            id: "kupxz6",
+                            text: "Our Impact",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        title: "kupxz6",
+                        "43gli7": {
+                            id: "43gli7",
+                            text: "See how we've made waves in mental health awareness!",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        subtitle: "43gli7",
+                        "2mgeld": {
+                            id: "2mgeld",
+                            list: ["imo36i", "1jxtqz", "6t01zl", "bkm7bq", "c7hxuz", "2ahoe1"],
+                            showTitle: !0,
+                            showSubtitle: !1,
+                            showImage: !0,
+                            type: "WorkList"
+                        },
+                        imo36i: {
+                            id: "imo36i",
+                            title: "iukev3",
+                            subtitle: "wsubq1",
+                            image: "e7pcfq"
+                        },
+                        iukev3: {
+                            id: "iukev3",
+                            text: "Community Workshops",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq1: {
+                            id: "wsubq1",
+                            text: "Empowering locals with knowledge and tools.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        e7pcfq: {
+                            id: "e7pcfq",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        "1jxtqz": {
+                            id: "1jxtqz",
+                            title: "okggzj",
+                            subtitle: "wsubq2",
+                            image: "t0p1qu"
+                        },
+                        okggzj: {
+                            id: "okggzj",
+                            text: "Awareness Campaigns",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq2: {
+                            id: "wsubq2",
+                            text: "Spreading the word through creative initiatives.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        t0p1qu: {
+                            id: "t0p1qu",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/29399294/pexels-photo-29399294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        "6t01zl": {
+                            id: "6t01zl",
+                            title: "1l5h4r",
+                            subtitle: "wsubq3",
+                            image: "vxksqm"
+                        },
+                        "1l5h4r": {
+                            id: "1l5h4r",
+                            text: "Partnerships with Experts",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq3: {
+                            id: "wsubq3",
+                            text: "Collaborating with mental health professionals for better support.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        vxksqm: {
+                            id: "vxksqm",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/7077809/pexels-photo-7077809.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        bkm7bq: {
+                            id: "bkm7bq",
+                            title: "rh4wxr",
+                            subtitle: "wsubq4",
+                            image: "qzbbu2"
+                        },
+                        rh4wxr: {
+                            id: "rh4wxr",
+                            text: "AI Chatbot Launch",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq4: {
+                            id: "wsubq4",
+                            text: "Introducing our AI assistant to the world.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        qzbbu2: {
+                            id: "qzbbu2",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/29399294/pexels-photo-29399294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        c7hxuz: {
+                            id: "c7hxuz",
+                            title: "6z4s99",
+                            subtitle: "wsubq5",
+                            image: "6bfep3"
+                        },
+                        "6z4s99": {
+                            id: "6z4s99",
+                            text: "Webinars and Talks",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq5: {
+                            id: "wsubq5",
+                            text: "Hosting discussions with experts and advocates.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        "6bfep3": {
+                            id: "6bfep3",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/13543280/pexels-photo-13543280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        "2ahoe1": {
+                            id: "2ahoe1",
+                            title: "r1vlqq",
+                            subtitle: "wsubq6",
+                            image: "3i8nhh"
+                        },
+                        r1vlqq: {
+                            id: "r1vlqq",
+                            text: "User Testimonials",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        wsubq6: {
+                            id: "wsubq6",
+                            text: "Real stories from real people about their journeys.",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        "3i8nhh": {
+                            id: "3i8nhh",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/5808014/pexels-photo-5808014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            height: 300.0075001875047,
+                            width: 400,
+                            aspectRatio: 1.3333,
+                            supportsCopy: !0
+                        },
+                        workList: "2mgeld",
+                        owbixa1: {
+                            id: "owbixa1",
+                            showButtons: !1,
+                            list: ["owbixa2"],
+                            type: "ButtonList"
+                        },
+                        owbixa2: {
+                            id: "owbixa2",
+                            button: "owbixa3"
+                        },
+                        owbixa3: {
+                            id: "owbixa3",
+                            href: "/",
+                            label: "Name",
+                            text: "See More Impact",
+                            textPlaceholder: "Name",
+                            hrefPlaceholder: "Select",
+                            hrefLabel: "Link",
+                            groupLabel: "Button",
+                            isExtrenal: !1,
+                            isPrimary: !0,
+                            isButton: !0,
+                            type: "ComboBox",
+                            elType: "Button",
+                            action: {
+                                name: "page",
+                                href: "/"
+                            }
+                        },
+                        buttonList: "owbixa1"
+                    },
+                    theme: "light1"
+                }, {
+                    uuid: "5dlcp",
+                    componentName: "SignalTestimonial",
+                    displayName: "Single Testimonial",
+                    properties: {
+                        lu59mj: {
+                            id: "lu59mj",
+                            text: "<p>Kelly Williams</p>",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        name: "lu59mj",
+                        "1q4b2v": {
+                            id: "1q4b2v",
+                            text: "Mental Health Advocate",
+                            type: "Text",
+                            elType: "Text",
+                            supportsCopy: !0
+                        },
+                        designation: "1q4b2v",
+                        rl43iz: {
+                            id: "rl43iz",
+                            label: "Image",
+                            type: "Image",
+                            src: "https://images.pexels.com/photos/1236678/pexels-photo-1236678.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                            searchType: "Person"
+                        },
+                        image: "rl43iz",
+                        yfhwi9: {
+                            id: "yfhwi9",
+                            text: "Mind Matters has changed my life! The AI assistant is like having a therapist in my pocket—minus the couch!",
+                            type: "Text",
+                            elType: "Text",
+                            supportsCopy: !0
+                        },
+                        quote: "yfhwi9"
+                    },
+                    theme: "light4"
+                }, {
+                    uuid: "rnu84",
+                    componentName: "ProductCtaA",
+                    displayName: "Product Cta",
+                    properties: {
+                        jb4yrl: {
+                            id: "jb4yrl",
+                            text: "Ready to Prioritize Your Mental Health?",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        title: "jb4yrl",
+                        dk4xa8: {
+                            id: "dk4xa8",
+                            text: "Join us in smashing the stigma and embracing a healthier mind, one question at a time!",
+                            type: "Text",
+                            elType: "Text"
+                        },
+                        subtitle: "dk4xa8",
+                        "1uro6j": {
+                            id: "1uro6j",
+                            list: ["swhfiv", "u56c82"],
+                            showButtons: !0,
+                            type: "ButtonList"
+                        },
+                        swhfiv: {
+                            id: "swhfiv",
+                            button: "n4x9np"
+                        },
+                        n4x9np: {
+                            id: "n4x9np",
+                            href: "",
+                            label: "Name",
+                            text: "Start Your Journey",
+                            textPlaceholder: "Name",
+                            hrefPlaceholder: "https://example.com",
+                            hrefLabel: "Link",
+                            groupLabel: "Button",
+                            isExtrenal: !1,
+                            isPrimary: !1,
+                            isButton: !0,
+                            type: "ComboBox",
+                            action: {
+                                name: "page",
+                                href: "/"
+                            }
+                        },
+                        u56c82: {
+                            id: "u56c82",
+                            button: "p491ut"
+                        },
+                        p491ut: {
+    id: "p491ut",
+    href: "www",
+    label: "Name",
+    text: "Talk to AI",
+    textPlaceholder: "Name",
+    hrefPlaceholder: "https://example.com",
+    hrefLabel: "Link",
+    groupLabel: "Button",
+    isExtrenal: false,
+    isPrimary: true,
+    isButton: true,
+    type: "ComboBox",
+    className: "button-primary chat-trigger", // Add chat-trigger class
+    onClick: "openChatModal", // Add click handler
+    action: {
+        name: "custom", // Change from "page" to "custom"
+        handler: "openChatModal" // Add custom handler instead of href
+    }
+},
+                        buttonList: "1uro6j"
+                    },
+                    theme: "light4",
+                    styles: []
+                }],
+                globals: {
+                    color1: "rgb(255, 255, 255)",
+                    color2: "rgb(244, 244, 243)",
+                    color3: "rgba(74,144,226,1)",
+                    color4: "rgb(79, 79, 79)",
+                    color5: "rgb(33, 32, 32)",
+                    paletteId: "",
+                    primaryColor: "rgb(120, 119, 230)",
+                    primaryColor800: "rgb(20,117,255)",
+                    secondaryColor: "",
+                    accentColor: "",
+                    primaryButtonBg: "rgb(20,117,255)",
+                    secondaryButtonBg: "rgb(245, 245, 245)",
+                    primaryButtonText: "rgb(255,255,255)",
+                    primaryButtonTextSize: "16px",
+                    secondaryButtonText: "rgb(51, 51, 51)",
+                    primaryButtonRD: "8px",
+                    secondaryButtonRD: "8px",
+                    primaryButtonId: 3,
+                    pageAnimation: "fade-in-bottom",
+                    headerFontWeight: "700",
+                    headerLineHeight: "1.2",
+                    bodyFontWeight: "400",
+                    bodyLineHeight: "1.5",
+                    fontSizeH1: "4.5rem",
+                    fontSizeH2: "3rem",
+                    fontSizeH3: "1.875rem",
+                    fontSizeH4: "1.5rem",
+                    fontSizeP1: "1.5rem",
+                    fontSizeP2: "1.25rem",
+                    fontSizeP3: "1rem",
+                    fontSizeP4: "0.875rem",
+                    secondaryButtonId: 2,
+                    projectId: "6739abece7d58e1a8151f743",
+                    domainName: "",
+                    save: !1,
+                    header: {
+                        uuid: "s719r",
+                        componentName: "NavbarA",
+                        displayName: "Navbar",
+                        properties: {
+                            cmi7e5: {
+                                id: "cmi7e5",
+                                text: "Mind Matters",
+                                type: "Text",
+                                elType: "Text",
+                                supportsCopy: !0
+                            },
+                            companyName: "cmi7e5",
+                            tm09co: {
+                                id: "tm09co",
+                                href: "/",
+                                src: "https://uncody.b-cdn.net/logos/nav-logo.svg",
+                                darkSrc: "https://uncody.b-cdn.net/logos/nav-logo-dark.svg",
+                                size: 40,
+                                groupLabel: "Logo",
+                                type: "NavLogo",
+                                aspectRatio: 1
+                            },
+                            logo: "tm09co",
+                            xo1jds: {
+                                id: "xo1jds",
+                                list: ["xyd1xu", "rk0rb6"],
+                                showLinks: !0,
+                                type: "LinkList"
+                            },
+                            xyd1xu: {
+                                id: "xyd1xu",
+                                link: "0vc53y"
+                            },
+                            "0vc53y": {
+                                id: "0vc53y",
+                                label: "Name",
+                                text: "Home",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                type: "ComboBox",
+                                href: "https://example.com",
+                                placeholder: "select",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                }
+                            },
+                            rk0rb6: {
+                                id: "rk0rb6",
+                                link: "ujeg89"
+                            },
+                            ujeg89: {
+                                id: "ujeg89",
+                                label: "Name",
+                                text: "Resources",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                type: "ComboBox",
+                                href: "https://example.com",
+                                placeholder: "select",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                }
+                            },
+                            linkList: "xo1jds",
+                            "6vgue6": {
+                                id: "6vgue6",
+                                list: ["kqqzhw"],
+                                showButtons: !0,
+                                type: "ButtonList"
+                            },
+                            kqqzhw: {
+                                id: "kqqzhw",
+                                button: "7yvqbj"
+                            },
+                            "7yvqbj": {
+                                id: "7yvqbj",
+                                type: "ComboBox",
+                                text: "Get Help",
+                                elType: "Button",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "https://example.com",
+    hrefLabel: "Link",
+                                isExternal: false,
+                                isPrimary: true,
+                                isButton: true,
+                                className: "button-primary chat-trigger",
+                                href: "/chat",
+                                label: "Name",
+                                action: {
+                                    name: "custom",
+                                    handler: "openChatModal"
+                                }
+},
+                            buttonList: "6vgue6",
+                            QNwE0Ss0P: {
+                                id: "QNwE0Ss0P",
+                                list: ["ZEFqgeWVe"],
+                                showSocials: !1,
+                                type: "SocialList"
+                            },
+                            ZEFqgeWVe: {
+                                id: "ZEFqgeWVe",
+                                social: "xE5uqPS3z"
+                            },
+                            xE5uqPS3z: {
+                                id: "xE5uqPS3z",
+                                href: "https://instagram.com",
+                                platform: "Instagram",
+                                type: "Social"
+                            },
+                            socialList: "QNwE0Ss0P"
+                        }
+                    },
+                    footer: {
+                        uuid: "8g02r",
+                        componentName: "FooterDetailedB",
+                        displayName: "FooterDetailed",
+                        properties: {
+                            "1foqz9": {
+                                id: "1foqz9",
+                                text: "Mind Matters",
+                                type: "Text",
+                                elType: "Text",
+                                supportsCopy: !0
+                            },
+                            companyName: "1foqz9",
+                            "5qv3jd": {
+                                id: "5qv3jd",
+                                text: "© 2023 Mind Matters. All Rights Reserved.",
+                                type: "Text",
+                                elType: "Text",
+                                supportsCopy: !0
+                            },
+                            copyright: "5qv3jd",
+                            "7bee2p": {
+                                id: "7bee2p",
+                                text: "Let's keep the conversation going!",
+                                fontWeight: "400",
+                                type: "Text",
+                                elType: "Text"
+                            },
+                            subtitle: "7bee2p",
+                            "53irm2": {
+                                id: "53irm2",
+                                list: ["09l5fd", "qe3zo0", "smzi4h", "nydtrl", "7f4grn"],
+                                showLinks: !0,
+                                type: "LinkList"
+                            },
+                            "09l5fd": {
+                                id: "09l5fd",
+                                link: "lwp1wn"
+                            },
+                            lwp1wn: {
+                                id: "lwp1wn",
+                                label: "Name",
+                                text: "Privacy Policy",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                },
+                                type: "ComboBox",
+                                href: "/",
+                                placeholder: "select"
+                            },
+                            qe3zo0: {
+                                id: "qe3zo0",
+                                link: "zc9o7x"
+                            },
+                            zc9o7x: {
+                                id: "zc9o7x",
+                                label: "Name",
+                                text: "Terms of Service",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                },
+                                type: "ComboBox",
+                                href: "/",
+                                placeholder: "select"
+                            },
+                            smzi4h: {
+                                id: "smzi4h",
+                                link: "zw4k9h"
+                            },
+                            zw4k9h: {
+                                id: "zw4k9h",
+                                label: "Name",
+                                text: "Contact Us",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                },
+                                type: "ComboBox",
+                                href: "/",
+                                placeholder: "select"
+                            },
+                            nydtrl: {
+                                id: "nydtrl",
+                                link: "79ygr5"
+                            },
+                            "79ygr5": {
+                                id: "79ygr5",
+                                label: "Name",
+                                text: "Blog",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                },
+                                type: "ComboBox",
+                                href: "/",
+                                placeholder: "select"
+                            },
+                            "7f4grn": {
+                                id: "7f4grn",
+                                link: "zp2q9q"
+                            },
+                            zp2q9q: {
+                                id: "zp2q9q",
+                                label: "Name",
+                                text: "FAQ",
+                                textPlaceholder: "Name",
+                                hrefPlaceholder: "Select",
+                                hrefLabel: "Link",
+                                groupLabel: "Link",
+                                action: {
+                                    name: "page",
+                                    href: "/"
+                                },
+                                type: "ComboBox",
+                                href: "/",
+                                placeholder: "select"
+                            },
+                            linkList: "53irm2",
+                            "6935mq": {
+                                id: "6935mq",
+                                list: ["3579i0", "ptf909"],
+                                showSocials: !0,
+                                type: "SocialList"
+                            },
+                            "3579i0": {
+                                id: "3579i0",
+                                social: "usv1be"
+                            },
+                            usv1be: {
+                                id: "usv1be",
+                                title: "instagram",
+                                size: "50px",
+                                groupLabel: "Social Icon",
+                                type: "Social",
+                                src: "",
+                                href: "https://www.instagram.com/",
+                                platform: "Instagram"
+                            },
+                            ptf909: {
+                                id: "ptf909",
+                                social: "i1ntv9"
+                            },
+                            i1ntv9: {
+                                id: "i1ntv9",
+                                type: "Social",
+                                groupLabel: "Social Icon",
+                                size: "50px",
+                                src: "",
+                                alt: "Twitter",
+                                href: "https://www.twitter.com/",
+                                platform: "Twitter"
+                            },
+                            socialList: "6935mq",
+                            lvOAoWS2a: {
+                                id: "lvOAoWS2a",
+                                list: ["ePfvlI3", "bsnjjD"],
+                                showButtons: !1,
+                                type: "LinkIconList"
+                            },
+                            ePfvlI3: {
+                                id: "ePfvlI3",
+                                icon: "FM9V89"
+                            },
+                            FM9V89: {
+                                id: "FM9V89",
+                                alt: "playstore",
+                                name: "App Store",
+                                type: "IconLinkImage",
+                                href: "",
+                                src: "https://uncody.b-cdn.net/logos/appstore.webp"
+                            },
+                            bsnjjD: {
+                                id: "bsnjjD",
+                                icon: "9XFp7H"
+                            },
+                            "9XFp7H": {
+                                id: "9XFp7H",
+                                alt: "playstore",
+                                name: "Play Store",
+                                type: "IconLinkImage",
+                                href: "",
+                                src: "https://uncody.b-cdn.net/logos/playstore.webp"
+                            },
+                            linkIconList: "lvOAoWS2a"
+                        },
+                        theme: "dark1"
+                    },
+                    headerTitleFont: "ClashDisplay",
+                    bodyFont: "Poppins",
+                    
+                    domainDetails: {
+                        domainName: "mentalhealth.uncody.site"
+                    },
+                    isLoggedIn: !0
+                },
+                name: "Home",
+                slug: "/"
+            }
+        </script>
+    </head>
+    <body data-site-id="6739abece7d58e1a8151f743">
+        <div id="root">
+            <section style="position:absolute;width:100%;z-index:1" class="night1 hasTheme" id="NavbarA" data-section-id="s719r">
+                <div class="container-lg">
+                    <header>
+                        <nav class="hidden sm:block">
+                            <div>
+                                <div class="navbar">
+                                    <div class="flex-menu">
+                                        <div class="menu">
+                                            <a class="logo" href="/">
+                                                <img alt="logo" class="logo-img" src="https://uncody.b-cdn.net/logos/nav-logo-dark.svg">
+                                                <span class="logo">
+                                                    <div class="text-label heading-text" data-key="text" data-id="cmi7e5">
+                                                        <p style="font-weight:700" class="text-xl">Mind Matters</p>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                            <div class="">
+                                                <a href="#" target="_self">
+                                                    <div class="bg-text text-label body-text" data-key="text" data-id="0vc53y">
+                                                        <p>Home</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="">
+                                                <a href="#" target="_self">
+                                                    <div class="bg-text text-label body-text" data-key="text" data-id="ujeg89">
+                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="flex">
+                                                <a href="/chat" 
+                                                    data-key="ComboBox" 
+                                                    class="button sbutton-2 button-extra button-text chat-trigger">Ask Watson</a>
+                                            </div>
+                                            <div class="flex gap-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="sm:hidden block navbar">
+                            <div class="mobile-nav">
+                                <a class="logo" href="/">
+                                    <div class="flex items-center">
+                                        <img alt="logo" class="logo-img inline-block" src="https://uncody.b-cdn.net/logos/nav-logo-dark.svg">
+                                        <span class="logo">
+                                            <div class="text-label heading-text" data-key="text" data-id="cmi7e5">
+                                                <p style="font-weight:700" class="text-xl">Mind Matters</p>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="mobile-burger body-text">
+                                    <svg width="20" height="20" viewBox="0 0 16 10">
+                                        <g fill="currentColor">
+                                            <rect y="8" width="16" height="2" rx="1"></rect>
+                                            <rect y="4" width="16" height="2" rx="1"></rect>
+                                            <rect width="16" height="2" rx="1"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </section>
+            <section style="background:rgba(0,0,0,.6)" class="section relative min-h-[60vh] sm:min-h-[100vh] flex justify-center items-center night1 hasTheme hasOverlay section-wrapper" id="HeroBanner1-5dyit" data-section-id="5dyit">
+                <div class="section-background">
+                    <div class="section-background-overlay" style="opacity:.3"></div>
+                </div>
+                <div class="container-lg">
+                    <div class="contentWrap relative">
+                        <div class="relative mx-auto text-center flex flex-col justify-center items-center max-w-4xl">
+                            <div class="text-label heading-text" data-key="text" data-id="hb1t2">
+                                <h1>Your Mind Matters: Let's Talk Mental Health!</h1>
+                            </div>
+                            <div class="my-8 tracking-wider max-w-3xl banner-subtitle text-label body-text" data-key="text" data-id="hb1t3">
+                                <p class="text-xl">Join the revolution of mental health awareness where AI meets empathy, and your questions find answers faster than you can say 'Therapy'!</p>
+                            </div>
+                            <div class="dp-f flex-wrap justify-center">
+                                <button id="chatButton" class="button sbutton-2 button-extra button-text">Chat Now</button>
+                                <a href="/chat" 
+                                data-key="ComboBox" 
+                                class="button sbutton-2 button-extra button-text chat-trigger">Ask Watson</a>
+                                <a href="/" target="_self" data-key="ComboBox" class="button button-3 button-extra button-text">Join the Movement</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 translate-x-[-50%] bottom-[4px] text-4xl">
+                        <div class="bi bi-chevron-down fadeInDown chevronAnimate text-label body-text" data-key="text"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section light4 hasTheme section-wrapper" id="FeatureHighlightA-hnbq1" data-section-id="hnbq1">
+                <div class="section-background"></div>
+                <div class="container-lg">
+                    <div class="row gx-2 gy-4 sm-gy-6">
+                        <div style="flex-grow:1" data-id="5kk1i6" class="flex col-xl-4 col-md-6 col-sm-12">
+                            <div class="dp-f fh-item items-center">
+                                <div class="fh-icon">
+                                    <figure class="media" data-img-id="o2uniq" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://static.uncody.com/icons/stats-chart.svg" alt="feature-logo" style="height:auto;width:100%" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="fh-text-container">
+                                    <div class="text-label heading-text" data-key="text" data-id="t5rg6t">
+                                        <p style="font-weight:700" class="text-xl">Instant Answers!</p>
+                                    </div>
+                                    <div class="text-label body-text" data-key="text" data-id="g92cbs">
+                                        <p>Get real-time responses to your mental health queries from our AI assistant, because who has time to wait?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fh-vert-line"></div>
+                        </div>
+                        <div style="flex-grow:1" data-id="tdwpzc" class="flex col-xl-4 col-md-6 col-sm-12">
+                            <div class="dp-f fh-item items-center">
+                                <div class="fh-icon">
+                                    <figure class="media" data-img-id="hbpf15" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://static.uncody.com/icons/server.svg" alt="feature-logo" style="height:auto;width:100%" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="fh-text-container">
+                                    <div class="text-label heading-text" data-key="text" data-id="m6gcpb">
+                                        <p style="font-weight:700" class="text-xl">Expert-Backed Resources</p>
+                                    </div>
+                                    <div class="text-label body-text" data-key="text" data-id="bauzqq">
+                                        <p>Access a treasure trove of curated content and tools from mental health professionals—no more Googling for hours!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fh-vert-line"></div>
+                        </div>
+                        <div style="flex-grow:1" data-id="8wn53w" class="flex col-xl-4 col-md-6 col-sm-12">
+                            <div class="dp-f fh-item items-center">
+                                <div class="fh-icon">
+                                    <figure class="media" data-img-id="uo336w" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://static.uncody.com/icons/airplane.svg" alt="feature-logo" style="height:auto;width:100%" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="fh-text-container">
+                                    <div class="text-label heading-text" data-key="text" data-id="gt212g">
+                                        <p style="font-weight:700" class="text-xl">Community Support</p>
+                                    </div>
+                                    <div class="text-label body-text" data-key="text" data-id="89dwzk">
+                                        <p>Join our growing community of like-minded individuals who prioritize mental health, because you're never alone in this journey!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fh-vert-line"></div>
+                        </div>
+                    </div>
+                    <div class="dp-f flex-wrap justify-center mt-4"></div>
+                </div>
+            </section>
+            <section class="section light1 hasTheme section-wrapper" id="ProductSideA-va295" data-section-id="va295">
+                <div class="section-background"></div>
+                <div class="container-lg">
+                    <div class="row ps-container flex gap-y-8 gx-8">
+                        <div class="pr-8 col-xl-6 col-md-6 col-sm-12">
+                            <div class="xxxxl-bold mgb-16 text-label heading-text" data-key="text" data-id="r71zil">
+                                <h3>What Makes Us Unique?</h3>
+                            </div>
+                            <div class="xl-regular gray800 mgb-24 text-label body-text" data-key="text" data-id="l64jdp">
+                                <p>It's not just about talking; it's about understanding and acting. Discover how we blend technology with care!</p>
+                            </div>
+                            <div class="mgb-16">
+                                <div class="ps-feature-section">
+                                    <div class="dp-f mgb-16">
+                                        <div hidden="" class="ps-feature-logo">
+                                            <figure class="media" data-img-id="apzml7" style="cursor:default">
+                                                <div class="img-wrapper" style="position:relative">
+                                                    <img class="img-image" src="https://static.uncody.com/icons/checkmark-sharp.svg" alt="image" style="height:auto;width:100%" loading="lazy">
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div>
+                                            <div class="md-regular text-gray-800 text-label heading-text" data-key="text" data-id="epp5rj">
+                                                <p style="font-weight:700" class="text-xl">AI-Powered Insights</p>
+                                            </div>
+                                            <div class="md-regular gray800 text-label body-text" data-key="text" data-id="ruh3wd">
+                                                <p>Our Watsonx AI analyzes your questions and provides personalized answers, cutting through the noise.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mgb-16">
+                                <div class="ps-feature-section">
+                                    <div class="dp-f mgb-16">
+                                        <div hidden="" class="ps-feature-logo">
+                                            <figure class="media" data-img-id="ugv1xa" style="cursor:default">
+                                                <div class="img-wrapper" style="position:relative">
+                                                    <img class="img-image" src="https://static.uncody.com/icons/checkmark-sharp.svg" alt="image" style="height:auto;width:100%" loading="lazy">
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div>
+                                            <div class="md-regular text-gray-800 text-label heading-text" data-key="text" data-id="uvpsa1">
+                                                <p style="font-weight:700" class="text-xl">User-Friendly Design</p>
+                                            </div>
+                                            <div class="md-regular gray800 text-label body-text" data-key="text" data-id="25pbge">
+                                                <p>Navigate our site like a breeze—because who needs complicated when you're already stressed out?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mgb-16">
+                                <div class="ps-feature-section">
+                                    <div class="dp-f mgb-16">
+                                        <div hidden="" class="ps-feature-logo">
+                                            <figure class="media" data-img-id="2gq20b" style="cursor:default">
+                                                <div class="img-wrapper" style="position:relative">
+                                                    <img class="img-image" src="https://static.uncody.com/icons/checkmark-sharp.svg" alt="image" style="height:auto;width:100%" loading="lazy">
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div>
+                                            <div class="md-regular text-gray-800 text-label heading-text" data-key="text" data-id="eq0r3e">
+                                                <p style="font-weight:700" class="text-xl">24/7 Availability</p>
+                                            </div>
+                                            <div class="md-regular gray800 text-label body-text" data-key="text" data-id="xl7uz2">
+                                                <p>Mental health doesn't keep office hours, and neither do we! Get assistance anytime, anywhere.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-f"></div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-sm-12">
+                            <figure class="media" data-img-id="f6i2hf" style="cursor:default">
+                                <div class="img-wrapper" style="justify-content:center;position:relative">
+                                    <img class="img-image" src="https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="image" height="554.7" width="554.7" style="border-radius:12px;height:554.7px;width:554.7px" loading="lazy">
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </section>
+            <section class="section light1 hasTheme section-wrapper" id="OurWork-eb9x8" data-section-id="eb9x8">
+                <div class="section-background"></div>
+                <div class="container-lg">
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="flex mx-auto text-center flex-col gap-4 items-center max-w-4xl">
+                            <div class="text-4xl text-label heading-text" data-key="text" data-id="kupxz6">
+                                <h2>Our Impact</h2>
+                            </div>
+                            <div class="text-[#6E757C] max-w-4xl text-label body-text" data-key="text" data-id="43gli7">
+                                <p class="text-xl">See how we've made waves in mental health awareness!</p>
+                            </div>
+                        </div>
+                        <div class="h-[2px] w-9 bg-[#222529] mt-4"></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-7" id="boxes">
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="e7pcfq" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="iukev3">
+                                        <p class="text-xl">Community Workshops</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="t0p1qu" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/29399294/pexels-photo-29399294.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="okggzj">
+                                        <p class="text-xl">Awareness Campaigns</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="vxksqm" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/7077809/pexels-photo-7077809.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="1l5h4r">
+                                        <p class="text-xl">Partnerships with Experts</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="qzbbu2" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/29399294/pexels-photo-29399294.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="rh4wxr">
+                                        <p class="text-xl">AI Chatbot Launch</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="6bfep3" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/13543280/pexels-photo-13543280.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="6z4s99">
+                                        <p class="text-xl">Webinars and Talks</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group flex flex-col">
+                                <div class="flex items-center justify-center h-full group-hover:h-[80%] overflow-hidden transition-all ease-in-out duration-500">
+                                    <figure class="media" data-img-id="3i8nhh" style="cursor:default">
+                                        <div class="img-wrapper" style="position:relative">
+                                            <img class="img-image" src="https://images.pexels.com/photos/5808014/pexels-photo-5808014.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="portfolio" height="300.0075001875047" width="400" style="height:300.0075001875047px;width:400px" loading="lazy">
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="absolute top-0 left-0 group-hover:h-[80%] h-full box-border w-full flex items-center flex-col justify-center bg-black/50 group-hover:opacity-100 opacity-0 transition-all ease-in-out duration-500 pointer-events-none"></div>
+                                <div class="bg-white group-hover:block absolute box-border w-full h-0 transition-all ease-in-out duration-500 overflow-hidden group-hover:h-[20%] bottom-0">
+                                    <div class="hover:text-[var(--primary700)] mt-3 ml-2 cursor-pointer text-label" data-key="text" data-id="r1vlqq">
+                                        <p class="text-xl">User Testimonials</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dp-f flex-wrap justify-center mt-4"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section light4 hasTheme section-wrapper" id="SignalTestimonial-5dlcp" data-section-id="5dlcp">
+                <div class="section-background"></div>
+                <div class="container-lg">
+                    <div class="row mn justify-center gx-2">
+                        <div class="col-xl-9 col-md-12 col-sm-12">
+                            <div class="text-center text-label heading-text" data-key="text" data-id="yfhwi9">
+                                <h3>Mind Matters has changed my life! The AI assistant is like having a therapist in my pocket—minus the couch!</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signalbox mt-7">
+                        <div class="signalimg mb-4">
+                            <figure class="media" data-img-id="rl43iz" style="cursor:default">
+                                <div class="img-wrapper" style="position:relative">
+                                    <img class="img-image" src="https://images.pexels.com/photos/1236678/pexels-photo-1236678.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="personimage" style="height:auto;width:100%" loading="lazy">
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="text-label body-text" data-key="text" data-id="lu59mj">
+                            <p>Kelly Williams</p>
+                        </div>
+                        <div class="text-label body-text" data-key="text" data-id="1q4b2v">
+                            <p>Mental Health Advocate</p>
+                        </div>
+                        <div class="rating mt-4">
+                            <img src="https://uncody.b-cdn.net/images/general/star-rating.svg" alt="rating">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section light4 hasTheme section-wrapper" id="ProductCtaA-rnu84" data-section-id="rnu84">
+                <div class="section-background"></div>
+                <div class="p-6 main section-card">
+                    <div class="container-lg">
+                        <div class="pcta-container dp-f-jc-ai">
+                            <div class="row jc-c grow gx-2 gy-2">
+                                <div class="col-xl-12 col-md-12 col-sm-12">
+                                    <div class="flex mx-auto text-center flex-col gap-4 items-center max-w-4xl">
+                                        <div class="xxxxl-regular text-label heading-text" data-key="text" data-id="jb4yrl">
+                                            <h3>Ready to Prioritize Your Mental Health?</h3>
+                                        </div>
+                                        <div class="xl-regular text-label body-text" data-key="text" data-id="dk4xa8">
+                                            <p class="text-xl">Join us in smashing the stigma and embracing a healthier mind, one question at a time!</p>
+                                        </div>
+                                    </div>
+                                    <div class="dp-f flex-wrap justify-center sm:justify-center mt-4">
+                                        <a href="/chat" target="_self" data-key="ComboBox" class="button sbutton-2 button-extra button-text">Start Your Journey</a>
+                                        <a href="/chat" data-key="ComboBox" class="button button-3 button-extra button-text chat-trigger"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section dark1 hasTheme section-wrapper" id="FooterDetailedB-8g02r" data-section-id="8g02r">
+                <div class="section-background"></div>
+                <div class="container-lg">
+                    <div class="row jc-c grow border-b border-gray-200 pb-16 gx-2">
+                        <div class="col-xl-12 col-md-10 col-12">
+                            <div class="row gx-2">
+                                <div class="flex col-xl-12 col-md-12 col-12">
+                                    <div class="flex grow flex-col sm:flex-row mb-4 sm:mb-0">
+                                        <div class="max-w-xs sm:max-w-sm">
+                                            <div class="flex items-center">
+                                                <div class="text-white text-label heading-text" data-key="text" data-id="1foqz9">
+                                                    <p style="font-weight:700" class="text-xl">Mind Matters</p>
+                                                </div>
+                                            </div>
+                                            <div style="font-weight:400" class="my-6 text-label body-text" data-key="text" data-id="7bee2p">
+                                                <p>Let's keep the conversation going!</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex grow justify-around"></div>
+                                    </div>
+                                    <div class="hidden sm:block max-w-[12rem]"></div>
+                                </div>
+                                <div class="flex flex-row flex-wrap gap-x-8 col-xl-10 col-md-12 col-12">
+                                    <div class="mb-3.5 footer-link">
+                                        <a href="/" target="_self">
+                                            <div class="font-semibold text-label body-text" data-key="text" data-id="lwp1wn">
+                                                <p style="font-weight:700" class="text-sm">Privacy Policy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3.5 footer-link">
+                                        <a href="/" target="_self">
+                                            <div class="font-semibold text-label body-text" data-key="text" data-id="zc9o7x">
+                                                <p style="font-weight:700" class="text-sm">Terms of Service</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3.5 footer-link">
+                                        <a href="/" target="_self">
+                                            <div class="font-semibold text-label body-text" data-key="text" data-id="zw4k9h">
+                                                <p style="font-weight:700" class="text-sm">Contact Us</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3.5 footer-link">
+                                        <a href="/" target="_self">
+                                            <div class="font-semibold text-label body-text" data-key="text" data-id="79ygr5">
+                                                <p style="font-weight:700" class="text-sm">Blog</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3.5 footer-link">
+                                        <a href="/" target="_self">
+                                            <div class="font-semibold text-label body-text" data-key="text" data-id="zp2q9q">
+                                                <p style="font-weight:700" class="text-sm">FAQ</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-2">
+                                <div class="sm:hidden flex gap-4 col-xl-2 col-md-2 col-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="md:flex justify-between mt-8 items-center">
+                        <div class="text-gray-200 mb-4 text-label body-text" data-key="text" data-id="5qv3jd">
+                            <p>© 2023 Mind Matters. All Rights Reserved.</p>
+                        </div>
+                        <div class="flex items-center gap-x-4">
+                            <a style="cursor:pointer" href="https://www.instagram.com/" class="body-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12 2c5.5191 0 10 4.48086 10 10 0 5.5191-4.4809 10-10 10-5.51914 0-10-4.4809-10-10C2 6.48086 6.48086 2 12 2Zm0 3.75c-1.6974 0-1.9102.00719-2.57688.03762-.66523.03035-1.11957.13601-1.51714.29051-.41098.15972-.75953.37343-1.107.72089-.34746.34746-.56117.69602-.72089 1.107-.1545.39753-.26012.85187-.29051 1.5171C5.75719 10.0898 5.75 10.3026 5.75 12s.00719 1.9102.03758 2.5769c.03039.6652.13601 1.1195.29051 1.5171.15972.411.37343.7595.72089 1.107.34747.3475.69602.5612 1.107.7209.39757.1545.85191.2601 1.51714.2905.66668.0304.87948.0376 2.57688.0376s1.9102-.0072 2.5769-.0376c.6652-.0304 1.1195-.136 1.5171-.2905.411-.1597.7595-.3734 1.107-.7209.3475-.3475.5612-.696.7209-1.107.1545-.3976.2601-.8519.2905-1.5171.0304-.6667.0376-.8795.0376-2.5769 0-1.6974-.0072-1.9102-.0376-2.57688-.0304-.66523-.136-1.11957-.2905-1.5171-.1597-.41098-.3734-.75954-.7209-1.107s-.696-.56117-1.107-.72089c-.3976-.1545-.8519-.26016-1.5171-.29051C13.9102 5.75719 13.6974 5.75 12 5.75Zm0 1.12613c1.6688 0 1.8665.00637 2.5255.03645.6094.02781.9403.12961 1.1606.21519.2917.11336.4999.24883.7186.46754.2187.21867.3542.42692.4675.71864.0856.22023.1874.55113.2152 1.1605.0301.65905.0365.85675.0365 2.52555s-.0064 1.8665-.0365 2.5255c-.0278.6094-.1296.9403-.2152 1.1606-.1133.2917-.2488.4999-.4675.7186-.2187.2187-.4269.3542-.7186.4675-.2203.0856-.5512.1874-1.1606.2152-.6589.0301-.8566.0365-2.5255.0365s-1.8666-.0064-2.52555-.0365c-.60937-.0278-.94027-.1296-1.1605-.2152-.29176-.1133-.49997-.2488-.71868-.4675-.21871-.2187-.35414-.4269-.4675-.7186-.08558-.2203-.18742-.5512-.21523-1.1606-.03008-.659-.03641-.8567-.03641-2.5255s.00633-1.8665.03641-2.52555c.02781-.60937.12965-.94027.21523-1.1605.11336-.29172.24879-.49997.4675-.71864.21871-.21871.42692-.35418.71868-.46754.22023-.08558.55113-.18738 1.1605-.21519.65905-.03008.85675-.03645 2.52555-.03645Zm0 1.91442c-1.7725 0-3.20945 1.43695-3.20945 3.20945S10.2275 15.2095 12 15.2095s3.2095-1.437 3.2095-3.2095c0-1.7725-1.437-3.20945-3.2095-3.20945Zm0 5.29275c-1.1506 0-2.08332-.9327-2.08332-2.0833 0-1.1506.93272-2.08332 2.08332-2.08332S14.0833 10.8494 14.0833 12 13.1506 14.0833 12 14.0833Zm4.0863-5.41955c0 .41422-.3358.74996-.7501.74996-.4141 0-.7499-.33574-.7499-.74996s.3358-.75.7499-.75c.4143 0 .7501.33578.7501.75c.4143 0 .7501.33578.7501.75Z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a style="cursor:pointer" href="https://www.twitter.com/" class="body-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                                    <path d="M13.6756 10.6218 20.2324 3h-1.5537l-5.6933 6.61788L8.43817 3H3.1935l6.8763 10.0074L3.1935 21h1.55384l6.01226-6.9887L15.5618 21h5.2447l-7.1313-10.3782h.0004Zm-2.1282 2.4738-.6967-.9965-5.54349-7.92939h2.38662l4.47367 6.39919.6967.9966 5.8152 8.318h-2.3866l-4.7454-6.7875v-.0004Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="fixed bottom-0 py-2 flex justify-center z-[99999] w-full">
+            </div>
+        </div>
+        <div id="chatModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg w-96 max-w-full">
+                <div class="flex justify-between items-center p-4 border-b">
+                    <h3 class="text-xl font-semibold">Mind Matters Chat</h3>
+                    <button id="closeChatButton" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="chatMessages" class="p-4 h-96 overflow-y-auto"></div>
+                <div class="p-4 border-t flex gap-2">
+                    <input id="messageInput" type="text" class="flex-1 border rounded-lg px-4 py-2" placeholder="Type your message...">
+                    <button id="sendButton" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Send</button>
+                </div>
+            </div>
+        </div>
+        <script id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">
+            [
+                7254,
+                6364,
+                5073,
+                160,
+                3509,
+                9096,
+                6633,
+                3692,
+                1961,
+                3390,
+                1617,
+                6025
+            ]</script>
+        <script id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">
+            {
+                "namedChunks": [
+                    "Navbar",
+                    "HeroBanner1",
+                    "FeatureHighlight",
+                    "ProductSide",
+                    "OurWork",
+                    "SignalTestimonial",
+                    "ProductCta",
+                    "FooterDetailedB"
+                    
+                ]
+            }</script>
+        <script async data-chunk="main" src="/static/js/main.06ad95c3.js"></script>
+        <script async data-chunk="Navbar" src="/static/js/clientpublish.14992eea.chunk.js"></script>
+        <script async data-chunk="Navbar" src="/static/js/6364.e3a787b4.chunk.js"></script>
+        <script async data-chunk="Navbar" src="/static/js/5073.04ec3cb6.chunk.js"></script>
+        <script async data-chunk="Navbar" src="/static/js/Navbar.a3c3300d.chunk.js"></script>
+        <script async data-chunk="HeroBanner1" src="/static/js/HeroBanner1.1dc4f940.chunk.js"></script>
+        <script async data-chunk="FeatureHighlight" src="/static/js/FeatureHighlight.36846693.chunk.js"></script>
+        <script async data-chunk="ProductSide" src="/static/js/ProductSide.0b612223.chunk.js"></script>
+        <script async data-chunk="OurWork" src="/static/js/OurWork.6f75b3f8.chunk.js"></script>
+        <script async data-chunk="SignalTestimonial" src="/static/js/SignalTestimonial.55f4611f.chunk.js"></script>
+        <script async data-chunk="ProductCta" src="/static/js/ProductCta.df988264.chunk.js"></script>
+        <script async data-chunk="FooterDetailedB" src="/static/js/FooterDetailedB.b22dca25.chunk.js"></script>
+        <script async data-chunk="MadeInUncody" src="/static/js/MadeInUncody.4c357d37.chunk.js"></script>
+        
+    </body>
+</html>

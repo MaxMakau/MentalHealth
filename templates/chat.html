@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Watsonx Assistant</title>
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 80%;
+        }
+        
+        .chat-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        .user-message {
+            background-color: #e2e8f0;
+            margin-left: 2rem;
+        }
+
+        .bot-message {
+            background-color: #f1f5f9;
+            margin-right: 2rem;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+        }
+
+        .chat-input button {
+            padding: 0.75rem 1.5rem;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background-color: #2563eb;
+        }
+
+        .loading {
+            display: none;
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat with Watsonx Assistant</h1>
+        </div>
+        
+        <div id="chatMessages" class="chat-messages"></div>
+        
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+
+        <div id="loading" class="loading">Processing...</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageInput = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+            const chatMessages = document.getElementById('chatMessages');
+            const loading = document.getElementById('loading');
+
+            function addMessage(message, isUser = false) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.classList.add(isUser ? 'user-message' : 'bot-message');
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function showTypingIndicator() {
+                loading.style.display = 'block';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function hideTypingIndicator() {
+                loading.style.display = 'none';
+            }
+
+            async function sendMessage(message) {
+                try {
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ message })
+                    });
+                    const data = await response.json();
+                    return data.response;
+                } catch (error) {
+                    console.error('Error:', error);
+                    return 'Sorry, I encountered an error.';
+                }
+            }
+
+            async function handleSendMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    addMessage(message, true);
+                    messageInput.value = '';
+                    sendButton.disabled = true;
+                    
+                    showTypingIndicator();
+                    const response = await sendMessage(message);
+                    hideTypingIndicator();
+                    
+                    addMessage(response);
+                    sendButton.disabled = false;
+                }
+            }
+
+            sendButton.addEventListener('click', handleSendMessage);
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSendMessage();
+                }
+            });
+
+            addMessage("Hello! I'm your AI assistant. How can I help you today?");
+        });
+    </script>
+    <div class="chat-header">
+        <h2>Powered by IBM Watsonx AI</h2>
+        <p>A Mental Health Chatbot for Everyone</p>
+        <p>Copyright 2024 IBM Corporation</p>
+    </div>
+</body>
+</html> 
