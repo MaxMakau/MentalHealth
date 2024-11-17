@@ -29,5 +29,3 @@ def chat():
     except Exception as e:
         print(f"Error in chat endpoint: {str(e)}")
         return jsonify({'error': 'Internal server error'}), 500
-
-if __name__ == '__main__':
